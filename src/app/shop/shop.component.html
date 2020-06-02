@@ -8,6 +8,6 @@
     </ul>
     <h3>为你推荐</h3>
     <ul *ngFor="let item of list let key=index"  [hidden]='item.value==0'>
-        <li><input type="checkbox" [(ngModel)]="item.value"> {{item.title}} <button (click)='remove(key)'>X</button></li>
+        <li><input type="checkbox" (change)='onchange()' [(ngModel)]="item.value"> {{item.title}} <button (click)='remove(key)'>X</button></li>
     </ul>
 </div>

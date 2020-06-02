@@ -13,6 +13,7 @@ export class ShopComponent implements OnInit {
   list: any[] = [];
   public key: string = "";
   ngOnInit() {
+    // 页面加载时把本地缓存的数组填充到list
     var str: any = this.service.get('list');
     if (str) {
       this.list = str;
@@ -29,6 +30,10 @@ export class ShopComponent implements OnInit {
       this.service.set('list', this.list);
       this.key = "";
     }
+  }
+  // 复选框事件,再次绑定list到本地缓存
+  onchange(){
+    this.service.set('list', this.list);
   }
   // 按回车执行添加事件
   keydown(e) {
