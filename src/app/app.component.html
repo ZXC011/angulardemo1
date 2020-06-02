@@ -1,1 +1,9 @@
+<h3>城市</h3>
+<select [(ngModel)]="value">
+    <option *ngFor="let item of list let key=index">{{item}}</option>
+</select>
+<h3>性别</h3>
+<input type="radio" name="sex" id="sex1" [(ngModel)]="sex" value="0"><label for="sex1">男</label>
+<input type="radio" name="sex" id="sex2" [(ngModel)]="sex" value="1"><label for="sex2">女</label>
+<pre>{{sex|json}}</pre>
 <app-shop></app-shop>

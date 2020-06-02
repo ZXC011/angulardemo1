@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularfirst';
+  value="湖北";
+  list:any[]=['湖北','江苏','河南'];
+  sex="0";
 }
+
