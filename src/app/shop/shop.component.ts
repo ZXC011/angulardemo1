@@ -13,6 +13,7 @@ export class ShopComponent implements OnInit {
   list: any[] = [];
   public key: string = "";
   ngOnInit() {
+    // 页面加载时把本地缓存的数组填充到list
     var str: any = this.service.get('list');
     if (str) {
       this.list = str;
